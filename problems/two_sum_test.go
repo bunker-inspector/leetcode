@@ -6,28 +6,28 @@ import (
 	"github.com/bunker-inspector/leetcode-go/problems"
 )
 
-type input struct {
+type twoSumInput struct {
 	Nums   []int
 	Target int
 }
 
-type TwoSumInput struct {
-	Input  input
+type twoSumCase struct {
+	Input  twoSumInput
 	Answer []int
 }
 
 func TestTwoSum(t *testing.T) {
-	for _, testInput := range []TwoSumInput{
-		TwoSumInput{
-			Input:  input{Nums: []int{2, 7, 11, 15}, Target: 9},
+	for _, testInput := range []twoSumCase{
+		twoSumCase{
+			Input:  twoSumInput{Nums: []int{2, 7, 11, 15}, Target: 9},
 			Answer: []int{0, 1},
 		},
-		TwoSumInput{
-			Input:  input{Nums: []int{3, 2, 4}, Target: 6},
+		twoSumCase{
+			Input:  twoSumInput{Nums: []int{3, 2, 4}, Target: 6},
 			Answer: []int{1, 2},
 		},
-		TwoSumInput{
-			Input:  input{Nums: []int{3, 3}, Target: 6},
+		twoSumCase{
+			Input:  twoSumInput{Nums: []int{3, 3}, Target: 6},
 			Answer: []int{0, 1},
 		},
 	} {

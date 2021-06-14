@@ -6,25 +6,25 @@ import (
 	"github.com/bunker-inspector/leetcode-go/problems"
 )
 
-type AddTwoNumbersInput struct {
+type addTwoNumbersCase struct {
 	List1  *problems.ListNode
 	List2  *problems.ListNode
 	Answer *problems.ListNode
 }
 
 func TestAddTwoNumbers(t *testing.T) {
-	for _, testInput := range []AddTwoNumbersInput{
-		AddTwoNumbersInput{
+	for _, testInput := range []addTwoNumbersCase{
+		addTwoNumbersCase{
 			List1:  problems.CreateList(2, 4, 3),
 			List2:  problems.CreateList(5, 6, 4),
 			Answer: problems.CreateList(7, 0, 8),
 		},
-		AddTwoNumbersInput{
+		addTwoNumbersCase{
 			List1:  problems.CreateList(9, 9, 9, 9, 9, 9, 9),
 			List2:  problems.CreateList(9, 9, 9, 9),
 			Answer: problems.CreateList(8, 9, 9, 9, 0, 0, 0, 1),
 		},
-		AddTwoNumbersInput{
+		addTwoNumbersCase{
 			List1:  problems.CreateList(0),
 			List2:  problems.CreateList(0),
 			Answer: problems.CreateList(0),
