@@ -5,24 +5,6 @@ import (
 	"strings"
 )
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
-func CreateList(vals ...int) *ListNode {
-	if len(vals) == 0 {
-		return nil
-	}
-	head := ListNode{Val: vals[0]}
-	curr := &head
-	for _, val := range vals[1:] {
-		curr.Next = &ListNode{Val: val}
-		curr = curr.Next
-	}
-	return &head
-}
-
 func (l *ListNode) String() string {
 	var sb strings.Builder
 	cursor := l
