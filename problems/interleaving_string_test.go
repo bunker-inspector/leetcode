@@ -18,7 +18,7 @@ type interleavingStringCase struct {
 }
 
 func TestIsInterleavingString(t *testing.T) {
-	for _, testInput := range []interleavingStringCase{
+	for _, testCase := range []interleavingStringCase{
 		interleavingStringCase{
 			Input: interleavingStringInput{
 				String1: "aabcc",
@@ -44,13 +44,13 @@ func TestIsInterleavingString(t *testing.T) {
 			Answer: true,
 		},
 	} {
-		result := problems.IsInterleavingString(testInput.Input.String1, testInput.Input.String2, testInput.Input.String3)
-		if result != testInput.Answer {
+		result := problems.IsInterleavingString(testCase.Input.String1, testCase.Input.String2, testCase.Input.String3)
+		if result != testCase.Answer {
 			t.Errorf("Given input %s, %s, %s:\n Expected %t, got %t.\n",
-				testInput.Input.String1,
-				testInput.Input.String2,
-				testInput.Input.String3,
-				testInput.Answer,
+				testCase.Input.String1,
+				testCase.Input.String2,
+				testCase.Input.String3,
+				testCase.Answer,
 				result)
 		}
 	}

@@ -13,7 +13,7 @@ type addTwoNumbersCase struct {
 }
 
 func TestAddTwoNumbers(t *testing.T) {
-	for _, testInput := range []addTwoNumbersCase{
+	for _, testCase := range []addTwoNumbersCase{
 		addTwoNumbersCase{
 			List1:  problems.CreateList(2, 4, 3),
 			List2:  problems.CreateList(5, 6, 4),
@@ -30,12 +30,12 @@ func TestAddTwoNumbers(t *testing.T) {
 			Answer: problems.CreateList(0),
 		},
 	} {
-		result := problems.AddTwoNumbers(testInput.List1, testInput.List2)
+		result := problems.AddTwoNumbers(testCase.List1, testCase.List2)
 		resCurr := result
-		ansCurr := testInput.Answer
+		ansCurr := testCase.Answer
 		for ansCurr != nil {
 			if resCurr.Val != ansCurr.Val {
-				t.Errorf("Result did not match expected!: %+v -- %+v", result, testInput.Answer)
+				t.Errorf("Result did not match expected!: %+v -- %+v", result, testCase.Answer)
 				t.Fail()
 				break
 			}

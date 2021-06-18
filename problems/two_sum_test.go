@@ -17,7 +17,7 @@ type twoSumCase struct {
 }
 
 func TestTwoSum(t *testing.T) {
-	for _, testInput := range []twoSumCase{
+	for _, TestCase := range []twoSumCase{
 		twoSumCase{
 			Input:  twoSumInput{Nums: []int{2, 7, 11, 15}, Target: 9},
 			Answer: []int{0, 1},
@@ -31,12 +31,12 @@ func TestTwoSum(t *testing.T) {
 			Answer: []int{0, 1},
 		},
 	} {
-		result := problems.TwoSum(testInput.Input.Nums, testInput.Input.Target)
-		if result[0] != testInput.Answer[0] && result[1] != testInput.Answer[1] {
+		result := problems.TwoSum(TestCase.Input.Nums, TestCase.Input.Target)
+		if result[0] != TestCase.Answer[0] && result[1] != TestCase.Answer[1] {
 			t.Errorf("Given input %+v, %d:\n Expected %+v, got %+v.\n",
-				testInput.Input.Nums,
-				testInput.Input.Target,
-				testInput.Answer,
+				TestCase.Input.Nums,
+				TestCase.Input.Target,
+				TestCase.Answer,
 				result)
 		}
 	}

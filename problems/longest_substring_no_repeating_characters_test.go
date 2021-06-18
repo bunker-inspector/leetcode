@@ -12,7 +12,7 @@ type LongestNonrepeatingSubstringInput struct {
 }
 
 func TestLongestNonrepeatingSubstring(t *testing.T) {
-	for _, testInput := range []LongestNonrepeatingSubstringInput{
+	for _, testCase := range []LongestNonrepeatingSubstringInput{
 		LongestNonrepeatingSubstringInput{
 			S:      "abcabcbb",
 			Answer: 3,
@@ -38,9 +38,9 @@ func TestLongestNonrepeatingSubstring(t *testing.T) {
 			Answer: 2,
 		},
 	} {
-		result := problems.LongestNonrepeatingSubstring(testInput.S)
-		if result != testInput.Answer {
-			t.Errorf("Given input %s:\n Expected %d, got %d.\n", testInput.S, testInput.Answer, result)
+		result := problems.LongestNonrepeatingSubstring(testCase.S)
+		if result != testCase.Answer {
+			t.Errorf("Given input %s:\n Expected %d, got %d.\n", testCase.S, testCase.Answer, result)
 		}
 	}
 }
