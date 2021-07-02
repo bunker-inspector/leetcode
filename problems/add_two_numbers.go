@@ -1,27 +1,5 @@
 package problems
 
-import (
-	"strconv"
-	"strings"
-)
-
-func (l *ListNode) String() string {
-	var sb strings.Builder
-	cursor := l
-	if cursor != nil {
-		sb.WriteString(strconv.FormatInt(int64(cursor.Val), 10))
-		cursor = cursor.Next
-	} else {
-		return ""
-	}
-	for cursor != nil {
-		sb.WriteString(", ")
-		sb.WriteString(strconv.FormatInt(int64(cursor.Val), 10))
-		cursor = cursor.Next
-	}
-	return sb.String()
-}
-
 func handleCarry(l *ListNode, carry *int) {
 	*carry = 0
 	if l.Val >= 10 {

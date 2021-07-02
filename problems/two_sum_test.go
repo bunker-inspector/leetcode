@@ -18,15 +18,15 @@ type twoSumCase struct {
 
 func TestTwoSum(t *testing.T) {
 	for _, TestCase := range []twoSumCase{
-		twoSumCase{
+		{
 			Input:  twoSumInput{Nums: []int{2, 7, 11, 15}, Target: 9},
 			Answer: []int{0, 1},
 		},
-		twoSumCase{
+		{
 			Input:  twoSumInput{Nums: []int{3, 2, 4}, Target: 6},
 			Answer: []int{1, 2},
 		},
-		twoSumCase{
+		{
 			Input:  twoSumInput{Nums: []int{3, 3}, Target: 6},
 			Answer: []int{0, 1},
 		},

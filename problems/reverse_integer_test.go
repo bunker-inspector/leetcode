@@ -13,27 +13,27 @@ type reverseIntegerCase struct {
 
 func ReverseIntegerTest(t *testing.T) {
 	for _, testCase := range []reverseIntegerCase{
-		reverseIntegerCase{
+		{
 			Input:  123,
 			Answer: 321,
 		},
-		reverseIntegerCase{
+		{
 			Input:  -123,
 			Answer: -321,
 		},
-		reverseIntegerCase{
+		{
 			Input:  120,
 			Answer: 21,
 		},
-		reverseIntegerCase{
+		{
 			Input:  0,
 			Answer: 0,
 		},
-		reverseIntegerCase{
+		{
 			Input:  1534236469,
 			Answer: 0,
 		},
-		reverseIntegerCase{
+		{
 			Input:  -2147483648,
 			Answer: 0,
 		},

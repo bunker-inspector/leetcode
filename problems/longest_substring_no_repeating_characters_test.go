@@ -13,27 +13,27 @@ type LongestNonrepeatingSubstringInput struct {
 
 func TestLongestNonrepeatingSubstring(t *testing.T) {
 	for _, testCase := range []LongestNonrepeatingSubstringInput{
-		LongestNonrepeatingSubstringInput{
+		{
 			S:      "abcabcbb",
 			Answer: 3,
 		},
-		LongestNonrepeatingSubstringInput{
+		{
 			S:      "bbbbb",
 			Answer: 1,
 		},
-		LongestNonrepeatingSubstringInput{
+		{
 			S:      "pwwkew",
 			Answer: 3,
 		},
-		LongestNonrepeatingSubstringInput{
+		{
 			S:      "",
 			Answer: 0,
 		},
-		LongestNonrepeatingSubstringInput{
+		{
 			S:      "aab",
 			Answer: 2,
 		},
-		LongestNonrepeatingSubstringInput{
+		{
 			S:      "abba",
 			Answer: 2,
 		},

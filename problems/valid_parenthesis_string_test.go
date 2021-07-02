@@ -13,43 +13,43 @@ type validParenthesisCase struct {
 
 func TestValidParenthesis(t *testing.T) {
 	for _, testCase := range []validParenthesisCase{
-		validParenthesisCase{
+		{
 			Input:  "()",
 			Answer: true,
 		},
-		validParenthesisCase{
+		{
 			Input:  "(*)",
 			Answer: true,
 		},
-		validParenthesisCase{
+		{
 			Input:  "()*)",
 			Answer: true,
 		},
-		validParenthesisCase{
+		{
 			Input:  "(*))",
 			Answer: true,
 		},
-		validParenthesisCase{
+		{
 			Input:  "()",
 			Answer: true,
 		},
-		validParenthesisCase{
+		{
 			Input:  "))",
 			Answer: false,
 		},
-		validParenthesisCase{
+		{
 			Input:  "**))",
 			Answer: true,
 		},
-		validParenthesisCase{
+		{
 			Input:  "*",
 			Answer: true,
 		},
-		validParenthesisCase{
+		{
 			Input:  "*(",
 			Answer: false,
 		},
-		validParenthesisCase{
+		{
 			Input:  "(",
 			Answer: false,
 		},

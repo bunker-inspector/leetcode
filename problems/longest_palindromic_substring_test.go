@@ -13,39 +13,39 @@ type longestPalindromicSubstringCase struct {
 
 func TestLongestPalindrome(t *testing.T) {
 	for _, testCase := range []longestPalindromicSubstringCase{
-		longestPalindromicSubstringCase{
+		{
 			Input:  "babad",
 			Answer: "bab",
 		},
-		longestPalindromicSubstringCase{
+		{
 			Input:  "cbbd",
 			Answer: "bb",
 		},
-		longestPalindromicSubstringCase{
+		{
 			Input:  "a",
 			Answer: "a",
 		},
-		longestPalindromicSubstringCase{
+		{
 			Input:  "ac",
 			Answer: "a",
 		},
-		longestPalindromicSubstringCase{
+		{
 			Input:  "acbcbca",
 			Answer: "acbcbca",
 		},
-		longestPalindromicSubstringCase{
+		{
 			Input:  "acbcbcacbc",
 			Answer: "acbcbca",
 		},
-		longestPalindromicSubstringCase{
+		{
 			Input:  "",
 			Answer: "",
 		},
-		longestPalindromicSubstringCase{
+		{
 			Input:  "vwxyz",
 			Answer: "v",
 		},
-		longestPalindromicSubstringCase{
+		{
 			Input:  "ddacbcbca",
 			Answer: "acbcbca",
 		},

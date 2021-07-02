@@ -1,5 +1,10 @@
 package problems
 
+import (
+	"strconv"
+	"strings"
+)
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -33,4 +38,23 @@ func (l *ListNode) Equals(other *ListNode) bool {
 		otherPtr = otherPtr.Next
 	}
 	return true
+}
+
+func (l *ListNode) String() string {
+	var sb strings.Builder
+	cursor := l
+	if cursor != nil {
+		sb.WriteRune('(')
+		sb.WriteString(strconv.FormatInt(int64(cursor.Val), 10))
+		cursor = cursor.Next
+	} else {
+		return "()"
+	}
+	for cursor != nil {
+		sb.WriteRune(' ')
+		sb.WriteString(strconv.FormatInt(int64(cursor.Val), 10))
+		cursor = cursor.Next
+	}
+	sb.WriteRune(')')
+	return sb.String()
 }

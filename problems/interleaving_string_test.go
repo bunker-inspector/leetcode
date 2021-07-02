@@ -19,7 +19,7 @@ type interleavingStringCase struct {
 
 func TestIsInterleavingString(t *testing.T) {
 	for _, testCase := range []interleavingStringCase{
-		interleavingStringCase{
+		{
 			Input: interleavingStringInput{
 				String1: "aabcc",
 				String2: "dbbca",
@@ -27,7 +27,7 @@ func TestIsInterleavingString(t *testing.T) {
 			},
 			Answer: true,
 		},
-		interleavingStringCase{
+		{
 			Input: interleavingStringInput{
 				String1: "aabcc",
 				String2: "dbbca",
@@ -35,7 +35,7 @@ func TestIsInterleavingString(t *testing.T) {
 			},
 			Answer: false,
 		},
-		interleavingStringCase{
+		{
 			Input: interleavingStringInput{
 				"",
 				"",

@@ -14,17 +14,17 @@ type addTwoNumbersCase struct {
 
 func TestAddTwoNumbers(t *testing.T) {
 	for _, testCase := range []addTwoNumbersCase{
-		addTwoNumbersCase{
+		{
 			List1:  problems.CreateList(2, 4, 3),
 			List2:  problems.CreateList(5, 6, 4),
 			Answer: problems.CreateList(7, 0, 8),
 		},
-		addTwoNumbersCase{
+		{
 			List1:  problems.CreateList(9, 9, 9, 9, 9, 9, 9),
 			List2:  problems.CreateList(9, 9, 9, 9),
 			Answer: problems.CreateList(8, 9, 9, 9, 0, 0, 0, 1),
 		},
-		addTwoNumbersCase{
+		{
 			List1:  problems.CreateList(0),
 			List2:  problems.CreateList(0),
 			Answer: problems.CreateList(0),

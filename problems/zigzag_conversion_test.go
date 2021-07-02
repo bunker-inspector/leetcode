@@ -18,42 +18,42 @@ type ZigZagConversionCase struct {
 
 func TestZigZagConversion(t *testing.T) {
 	for _, testCase := range []ZigZagConversionCase{
-		ZigZagConversionCase{
+		{
 			Input: zigZagInput{
 				S:    "PAYPALISHIRING",
 				Rows: 3,
 			},
 			Answer: "PAHNAPLSIIGYIR",
 		},
-		ZigZagConversionCase{
+		{
 			Input: zigZagInput{
 				S:    "PAYPALISHIRING",
 				Rows: 4,
 			},
 			Answer: "PINALSIGYAHRPI",
 		},
-		ZigZagConversionCase{
+		{
 			Input: zigZagInput{
 				S:    "A",
 				Rows: 1,
 			},
 			Answer: "A",
 		},
-		ZigZagConversionCase{
+		{
 			Input: zigZagInput{
 				S:    "A",
 				Rows: 0,
 			},
 			Answer: "",
 		},
-		ZigZagConversionCase{
+		{
 			Input: zigZagInput{
 				S:    "ABCD",
 				Rows: 5,
 			},
 			Answer: "ABCD",
 		},
-		ZigZagConversionCase{
+		{
 			Input: zigZagInput{
 				S:    "",
 				Rows: 8,
